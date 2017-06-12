@@ -7,7 +7,7 @@ import cnaidai_Login
 def check_auth_state():
     browser = cnaidai_Login.browser
     try:
-        browser.find_element_by_class_name('u-phone own f-hide')
+        browser.find_element_by_class_name('u-realname own f-hide')
+        return 'allAuthenticated'
     except:
-        print 'phone in not auth'
-        return
+        return 'notRealNameAuth'
