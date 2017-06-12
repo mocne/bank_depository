@@ -29,6 +29,8 @@ if __name__ == '__main__':
     suite.addTest(cnaidai_BankDepository('start_to_test'))
     suite.addTest(cnaidai_BankDepository('check_user_state'))
     suite.addTest(cnaidai_BankDepository('check_depository_state'))
+    htmlFile = './testReport/' + str(time.strftime('%Y%m%d')) + '.html'
+    fp = file(htmlFile, 'wb')
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='银行存管项目', description='测试报告书')
     runner.run(suite)
     f.close()
